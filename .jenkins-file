@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('Regression') {
+            steps {
+                bat '${params.regression}'
+            }
+        }
+    }
+}
