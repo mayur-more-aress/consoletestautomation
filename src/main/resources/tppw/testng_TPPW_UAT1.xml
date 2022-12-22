@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TPPW Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	value="uat1" />		
+	<!-- <listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners> -->
+    
+    <test name="TPPW Test Cases" >
+		<classes>
+		
+			<!-- TPPW Customer portal -->	 
+	<!--	     <class name="com.TPPW.CustomerPortal.testcases.CheckDomainAvailability"></class>
+		     <class name="com.TPPW.CustomerPortal.testcases.Register_Domain"></class>
+		     <class name="com.TPPW.CustomerPortal.testcases.Renew_Domain"></class></class> 
+		      <class name="com.TPPW.ResellerPortal.testcases.Registrant_Name_Change"></class>-->
+		     
+		     <!-- TPPW Resller Portal -->	 
+	<!--    	 <class name="com.TPPW.ResellerPortal.testcases.CheckDomainAvailability_BulkDomain"></class>
+	 			 <class name="com.TPPW.ResellerPortal.testcases.CheckDomainAvailability_SingleDomain"></class>
+	  			 <class name="com.TPPW.ResellerPortal.testcases.Register_Domain"></class>
+	       	  -->
+	       	  
+	       	  <class name="com.TPPW.Resellerapi.testcases.ResellerApiPortalTest">
+		     <methods>
+		     <include name="verifyDomainRegistration"/>  
+		 <include name="verifyDomainRegistration"/>
+		     <include name="verifyDomainRenewal"/>
+		     <include name="verifyCreateNameServer"/>
+		    <include name="verifyDomainLockandUnlock"/>
+		    <include name="verifyWhoisDomain"/> 
+		   <!--  <include name="verifyRegistrantNameChange"/>  
+		    <include name="verifyDomainTransferAu"/>  
+		     <include name="verifyDomainTransferNonAu"/> -->
+		       
+		     </methods>
+		     </class>
+		</classes>
+	</test>  
+	
+</suite> 

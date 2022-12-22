@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression citc Test Suite">
+	<parameter name="environment"  value="aws"/>
+	<parameter name="virtualization"  value="MelbourneIT"/>
+	<parameter name="noOfAccounts"  value="1"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test name="Console Release Regression CITC Test Cases">
+		<classes>
+		 
+		 <class	name="com.awstestdataInitialization.testcases.CreateNewGreenCodeSalesDB">
+			<methods>
+				<include name="createNewGreencodeInSalesDB" />
+			</methods>
+		</class> 
+		</classes>
+	</test>  
+</suite> 

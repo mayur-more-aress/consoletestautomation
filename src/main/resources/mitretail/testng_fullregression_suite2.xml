@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+		 <classes>
+		 
+	 <class name="com.MIT.OldShoppingCart.testcases.Domain_Registration"> 
+	 <methods> 
+              <include name="verifyMultipleDomainRegistrationForExistingCustomerUsingExistingCard"/>  
+            <include name="verifyDomainRegistrationForExistingCustomerUsingExistingCard"/> 
+               <include name="verifyDomainRegistrationForExistingCustomerUsingPrepaidCredit"/>   
+             </methods> 
+	</class> 
+	
+    <class name="com.MIT.OldShoppingCart.testcases.DomainAndProduct_Order">
+	       <methods>  
+	    
+	        <include name="verifyDomainRegistrationAndEmailProductForExistingBTCustomerUsingExistingCard"/> 
+          <include name="verifyDomainRegistrationAndHostingServiceForExistingCustomerUsingPrepaidCredit"/>  
+                <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingExistingCard"/> 
+                  <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingPrepaidCard"/> 
+                <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/>  
+                 <include name="verifyDomainRegistrationAndProductForExistingBTCustomerUsingExistingCard"/>
+             </methods> 
+        </class>
+     <class name="com.NRG.OldShoppingCart.testcases.SSL_Product">
+      <methods> 
+              <include name="verifyCorrectErrorInfoIsDisplayed"/>  
+              <include name="registerDomainAndAddVirtualHostServiceLine"/>  
+              <include name="purchaseSSLProduct"/> 
+      </methods> 
+   </class> 
+    <class name="com.MIT.OldShoppingCart.testcases.CheckDomainAvailability">
+		   <methods> 
+              <include name="verifyDomainNameIsAvailableForRegistration"/>  
+            <include name="verifyDomainNameIsNotAvailableForRegistration"/> 
+               <include name="verifyDomainNameAvailableForRegistrationAndPremiumn"/>   
+             </methods> 
+		  </class>
+		</classes>
+	</test>  
+</suite> 
+

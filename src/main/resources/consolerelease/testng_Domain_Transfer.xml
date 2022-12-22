@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+
+  <class name="com.NRG.OldShoppingCart.testcases.Domain_Transfer"> 
+        <methods> 
+            <include name="verifyDomainRegistrationInResellerPortal"/>
+            <include name="transferDomainFromCustomerPortalAndVerifytransferral2WF"/>  
+            <include name="transferDomainFromCustomerPortalAndVerifyicannTransfer2WF"/> 
+            <include name="transferDomainFromCustomerPortalAndVerifyautransfer2WF"/> 
+       </methods>
+ </class>
+ 
+ <class name="com.MIT.OldShoppingCart.testcases.Domain_Transfer"> 
+        <methods> 
+            <include name="transferDomainFromCustomerPortalAndVerifytransferral2WF"/>
+            <include name="transferDomainFromCustomerPortalAndVerifyicannTransfer2WF"/>  
+            <include name="transferDomainFromCustomerPortalAndVerifyautransfer2WF"/>  
+       </methods>
+ </class>
+ 
+ <class name="com.MITDPS.ResellerPortal.testcases.Transfer_Domain"> 
+        <methods> 
+            <include name="transferDomainFromResellerPortalAndVerifyautransfer2WF"/>
+       </methods>
+ </class>
+	</classes>
+	</test>  
+</suite> 
+

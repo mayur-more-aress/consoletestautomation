@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MITRetail Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	value="uat1" />		
+	<!-- <listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners> -->
+    
+    <test name="MITRetail Test Cases" >
+		<classes>
+		
+			<!-- MITRetail Customer portal -->	 
+	<!--	 <class name="com.MIT.CustomerPortal.testcases.CreditCard_Operations"></class>
+		     <class name="com.MIT.CustomerPortal.testcases.RenewDomain"></class> -->
+		     
+		     <!-- MITRetail old shopping cart -->	 
+	<!--     <class name="com.MIT.OldShoppingCart.testcases.Domain_Registration"></class>
+	       	 <class name="com.MIT.OldShoppingCart.testcases.Domain_Transfer"></class>
+	       	 <class name="com.MIT.OldShoppingCart.testcases.DomainAndProduct_Order"></class>
+	       	 <class name="com.MIT.OldShoppingCart.testcases.ProductRenewal"></class>
+	       	 <class name="com.MIT.OldShoppingCart.testcases.SSL_Product"></class>  -->
+	       	 
+	       	      <!--<class name="com.MIT.OldShoppingCart.testcases.DomainAndProduct_Order">
+	       	  <methods>            
+                   <include name="verifyDomainRegistrationAndHostingServiceForExistingCustomerUsingPrepaidCredit"/>
+                   <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingExistingCard"/>   
+                    <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/> 
+                    /methods>
+		       </class>-->    
+                    
+               <!--<class name="com.MIT.CustomerPortal.testcases.RegistrantNameChange">
+		       <methods>                      
+                  <include name="verifyDomainRegistration"/>  
+                  <include name="verifyRegistrantNameChangeWithExistingCard"/> 
+                   <include name="verifyRegistrantNameChangeWithNewCard"/> 
+                </methods>
+	       	  </class>-->    
+	       	  
+	       	    <class name="com.MIT.CustomerPortal.testcases.CreditCard_Operations">
+		       <methods>                      
+                  <include name="testLoginToStore"/> 
+                </methods>
+	       	  </class>
+		</classes>
+	</test>  
+</suite> 

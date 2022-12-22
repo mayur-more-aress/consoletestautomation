@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+		 <classes>
+	 <class name="com.NRG.OldShoppingCart.testcases.Domain_Registration"> 
+	 <methods> 
+             <include name="verifyDomainRegistrationOrderForExistingCustomer"/>  
+             <include name="verifyMultipleDomainRegistrationForExistingCustomerUsingExistingCard"/>  
+             </methods> 
+	</class>
+	
+    <class name="com.NRG.OldShoppingCart.testcases.DomainAndProduct_Order">
+	       <methods>  
+	       <include name="verifyDomainRegistrationAndProductForExistingBTCustomerUsingPrepaidCredit"/>   
+	        <include name="verifyDomainRegistrationAndEmailProductForExistingBTCustomerUsingExistingCard"/>   
+                <include name="verifyDomainRegistrationAndHostingServiceForExistingCustomerUsingPrepaidCredit"/>  
+                <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingExistingCard"/>  
+                <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/>  
+                 <include name="verifyDomainRegistrationForExistingCustomerUsingPrepaidCredit"/>  
+             </methods> 
+        </class> 
+   <class name="com.NRG.OldShoppingCart.testcases.SSL_Product"></class>
+		</classes>
+	</test>  
+</suite> 
+

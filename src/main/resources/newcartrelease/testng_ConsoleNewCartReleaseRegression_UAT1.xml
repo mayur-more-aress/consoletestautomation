@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="New Cart Release Regression Test Suite" >
+
+	<parameter name="environment" value="uat1" />
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+    <test name="New Cart Release Regression Test Cases" >
+		<classes>
+	  		<class name="com.NRG.NewShoppingCart.testcases.CheckDomainAvailability"></class>
+	   		<class name="com.NRG.NewShoppingCart.testcases.ProductProvisioning"></class>
+    		<class name="com.NRG.NewShoppingCart.testcases.TestDomainRegistrationAndEmailServiceOrder"></class>
+    	  	<class name="com.NRG.NewShoppingCart.testcases.TestDomainRegistrationWithDomainPrivacy"></class>
+    	  	<class name="com.NRG.NewShoppingCart.testcases.TestDomainregistrationWithHostingAndExtraService">
+    	  	<methods>   
+                 <include name="verifyDomainRegistrationAndWebHostingProduct"/>  
+             </methods>
+    	  	</class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingExistingCard"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingNewCard"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingPrepaid"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestNewCustomerScenarioUsingNewCard"></class>
+		</classes>
+	</test>  
+</suite>
+

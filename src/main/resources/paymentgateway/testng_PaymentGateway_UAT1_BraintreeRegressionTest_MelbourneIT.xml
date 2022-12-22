@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite
+	name="Payment Gateway UAT Braintree Regression MelbourneIT Test Suite"
+	thread-count="10" parallel="tests">
+	<parameter name="environment" value="uat1" />
+	<parameter name="paymentgateway" value="braintree" />
+	<parameter name="obsidian" value="disabled" />
+
+	<listeners>
+		<listener
+			class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+
+	<test
+		name="Payment Gateway UAT Braintree Regression MelbourneIT Test Cases"
+		parallel="none" preserve-order="true">
+
+		<classes>
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
+				<methods>
+					<include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+					<include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+					<include name="testProductSetup2WorkflowInConsoleAdmin" />
+				</methods>
+			</class> -->
+			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin">
+				<methods>
+<!-- 					<include name="testViewBillingInConsoleAdmin" />
+					<include name="testUpdateExpiryInConsoleAdmin" /> -->
+					<!-- <include name="testRechargePrepaidInConsoleAdminUsingExistingCard" /> -->
+					 <include name="testRechargePrepaidInConsoleAdminUsingNewCard" />
+				</methods>
+			</class>
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSMUI">
+				<methods>
+					<include name="testAddNewCreditCardInSMUI" />
+					<include name="testModifyExistingCreditCardInSMUI" />
+					<include name="testMakeCreditCardDefaultInSMUI" />
+					<include name="testDeleteCreditCardInSMUI" />
+					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
+					<include name="testRechargePrepaidUsingNewCardInSMUI" />
+				</methods>
+			</class> -->
+		</classes>
+	</test>
+</suite> 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+
+  <class name="com.NRG.CustomerPortal.testcases.AutomaticCancellation"> 
+        <methods> 
+            <include name="verifyWebHostingProductCancellation"/>
+            <include name="verifyEmailHostingProductCancellation"/>  
+            <include name="verifyDomainManagerProductCancellation"/> 
+            <include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/> 
+            <include name="verifyDomainPrivacyProductCancellation"/> 
+            <include name="verifyNonSolutionProductAndComponentProductCancellation"/> 
+            <!-- <include name="verifySolutionProductAndComponentProductCancellation"/>   
+              <include name="verifyDomainBackorderProductCancellation"/>-->   
+       </methods>
+ </class>
+	   
+	   <class name="com.MIT.CustomerPortal.testcases.AutomaticCancellation">
+	      <methods>   
+              <include name="verifyNonSolutionProductAndComponentProductCancellation"/>
+              <include name="verifyDomainPrivacyProductCancellation"/>
+              <include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/>
+              <include name="verifyWebHostingProductCancellation"/>
+              <include name="verifDomainManagerProductCancellation"/>
+              <include name="verifyEmailHostingProductCancellation"/>
+               <!-- <include name="verifySolutionProductAndComponentProductCancellation"/>   
+              <include name="verifyDomainBackorderProductCancellation"/>-->   
+         </methods> 
+       </class>
+	     
+	     <!--<class name="com.MITDPS.ResellerPortal.testcases.AutomaticCancellation">
+			  	<methods>
+			     	<include name="verifyDomainManagerProductCancellation"/>
+			     	<include name="verifyEmailHostingProductCancellation"/>  
+			     	<include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/>
+			     	<include name="verifyNonSolutionAndComponentProductCancellation"/>
+			     	<include name="verifySolutionAndComponentProductCancellation"/>
+		     	</methods>
+			  </class>-->
+		</classes>
+	</test>  
+</suite> 
+

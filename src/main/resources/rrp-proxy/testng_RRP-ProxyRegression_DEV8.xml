@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RRP-Proxy Regression Test Suite" thread-count="1"
+	parallel="tests" preserve-order="true">
+
+	<parameter name="environment" value="dev8" />
+	<parameter name="namespace" value="com" />
+	<parameter name="accountReference" value="TPP-60053" />
+
+	<!-- <listeners> <listener class-name="com.reports.extentreportslistener.ExtentReportListener" 
+		/> </listeners> -->
+
+	<test name="RRP-Proxy Regression Test Cases">
+		<classes>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
+				</methods>
+			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomainCheck">
+				<methods>
+					<include name="verifyIfDomainAvailableForTransfer" />
+					<include name="verifyIfDomainIsRegisteredAndAvailableForTransfer" />
+					<include name="verifyIfDomainAuthCodeIsWrong" />
+				</methods>
+			</class>
+
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistration" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremium" />
+				</methods>
+			</class>
+			
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomain">
+				<methods>
+					<include name="verifySuccessfulDomainTransferOrder" />
+					<include name="verifyDomainTransferWorkflowInConsoleAdmin" />
+					<include name="verifyDomainTransferOrderInRRPPortal" />
+					<include name="verifyUnsuccessfulDomainTransferOrder" />
+				</methods>
+			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/>
+			
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_RegisterDomain"/>
+			
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
+				</methods>
+			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
+				<methods>
+					<include name="generateARenewalWorkflowFromConsoleAdmin"></include>
+					<include name="renewADomainFromResellerPortal" />
+					<include name="executeRenewal2WorkflowFromConsoleAdmin" />
+					<include name="verifyDomainExpiryDateAfterRenewalInRrpPortal" />
+					<include name="renewADomainFromResellerPortalWhichIsAlreadyRenewed" />
+				</methods>
+			</class>
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_RenewDomain">
+				<methods>
+					<include name="registerADomainInCustomerPortal" />
+					<include name="renewADomainInCustomerPortal" />
+					<include name="checkExpirationDateOfRenewedDomain" />			
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+</suite>

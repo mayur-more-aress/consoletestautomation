@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="paymentgateway"  value="braintree"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+	
+	 <class name="com.NRG.CustomerPortal.testcases.CreditCard_Operations">
+	       <methods>  
+               <include name="testAddNewCreditCardInSMUI"/>  
+               <include name="testModifyExistingCreditCardInSMUI"/> 
+                <include name="testMakeCreditCarddefaultInSMUI"/>  
+                <include name="testDeleteCreditCardInSMUI"/>
+                <include name="testRechargePrepaidUsingNewCardInSMUI"/>  
+                <include name="testRechargePrepaidUsingExistingCardInSMUI"/> 
+                <include name="verifyUpdateSubscriptionInSMUI"/> 
+                </methods>
+             </class> 
+   
+        <class name="com.paymentgateway.uat.netregistry.testcases.RegressionConsoleAdmin">
+	       <methods>  
+                <include name="testViewBillingAccountDetailsInConsoleAdmin"/>  
+                <include name="testRechargePrepaidInConsoleAdminUsingExistingCard"/> 
+                <include name="testViewBillingUpdateExpiryInConsoleAdmin"/>
+                </methods>
+         </class>
+             
+             <class name="com.MIT.CustomerPortal.testcases.CreditCard_Operations">
+	       <methods>   
+              <include name="testAddNewCreditCardInSMUI"/>  
+                 <include name="testModifyExistingCreditCardInSMUI"/> 
+                <include name="testMakeCreditCardDefaultInSMUI"/> 
+                <include name="testDeleteCreditCardInSMUI"/>
+                <include name="testRechargePrepaidUsingNewCardInSMUI"/>  
+                <include name="testRechargePrepaidUsingExistingCardInSMUI"/> 
+                <include name="verifyUpdateSubscriptionInSMUI"/>   
+             </methods> 
+              </class>
+         <class name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin">
+	       <methods>  
+                 <include name="testViewBillingAccountDetailsInConsoleAdmin"/>  
+                 <include name="testRechargePrepaidInConsoleAdminUsingExistingCard"/> 
+                 <include name="testViewBillingUpdateExpiryInConsoleAdmin"/>
+           </methods>
+         </class>
+       
+         <class name="com.MITDPS.CustomerPortal.testcases.CreditCard_Operations">
+			  <methods> 
+		     		<include name="testAddNewCreditCardInSMUI"/>
+		     		<include name="verifyUpdateSubscriptionInSMUI"/>
+		     		<include name="testMakeCreditCardDefaultInSMUI"/>
+		     		<include name="testRechargePrepaidUsingExistingCardInSMUI"/>
+		     		<include name="testRechargePrepaidUsingNewCardInSMUI"/>
+		     		<include name="testDeleteCreditCardInSMUI"/>
+		     		 <include name="verifyUpdateSubscriptionInSMUI"/> 
+		     	</methods>
+			  </class>
+		<class name="com.paymentgateway.MITDPS.testcases.RegressionConsoleAdmin">
+	       <methods>  
+                 <include name="testViewBillingAccountDetailsInConsoleAdmin"/>  
+                 <include name="testRechargePrepaidInConsoleAdminUsingExistingCard"/> 
+                 <include name="testViewBillingUpdateExpiryInConsoleAdmin"/>
+           </methods>
+         </class>
+         
+         
+	  <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
+	       <methods> 
+	              <include name="testViewBillingInConsoleAdmin"/>
+                  <include name="testRechargePrepaidInConsoleAdminUsingExistingCard"/>
+           </methods>
+         </class>
+       
+		</classes>
+	</test>  
+</suite> 
+

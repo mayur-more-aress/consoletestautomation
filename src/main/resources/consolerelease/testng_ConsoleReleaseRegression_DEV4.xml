@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression DEV2 Test Suite">
+	<parameter name="environment"  value="dev4"/>
+	
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test name="Console Release Regression DEV4 Test Cases">
+		<classes>	
+ 			<class name="com.consoleregression.testcases.tpp.CustomerPortalJourneyTest">
+			<methods>
+            	<include name="verifyDomainRegistrationWithProductOrderForNewCustomerInCustomerPortal" />                    
+             	<include name="verifyDomainRegistrationWithProductOrderForExistingCustomerInCustomerPortal" />                    
+            </methods>
+			</class>
+			<class name="com.consoleregression.testcases.tpp.ResellerPortalJourneyTest">
+				<methods>
+                    <include name="verifyComDomainRegistrationInResellerPortal" />       
+                    <include name="verifyNetAuDomainRegistrationInResellerPortal" />
+                    <include name="verifyIdAuDomainRegistrationInResellerPortal" />             
+                </methods>
+        	</class>
+		</classes>
+	</test>  
+</suite> 
+
+

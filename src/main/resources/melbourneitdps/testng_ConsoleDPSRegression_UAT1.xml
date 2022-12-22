@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MITDPS Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	value="dev8" />		
+	<!-- <listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners> -->
+    
+    <test name="MITDPS Test Cases" >
+		<classes>
+		
+			<!-- MITDPS Reseller portal -->	 
+			 <class name="com.MITDPS.ResellerPortal.testcases.Register_Domain"></class>
+			 <class name="com.MITDPS.ResellerPortal.testcases.DomainAnd_ProductOrder">
+			 	<methods>
+		     		<include name="verifyDomainAndWebHostingProductRegistration"/>  
+		     		<include name="verifyPurchaseOffice365Product"/>  
+		     		<include name="verifyDomainAndDomainManagerProductRegistrationInResellerPortal"/>  
+		     	</methods>
+			 </class>
+			 <class name="com.MITDPS.ResellerPortal.testcases.Renew_Domain"></class>
+			<!-- <class name="com.MITDPS.ResellerPortal.testcases.Transfer_Domain">
+			 <methods>
+		     		<include name="getTestDataForautransfer2"/>  
+		     		<include name="transferDomainFromResellerPortalAndVerifyautransfer2WF"/>  
+		     	</methods>
+			 </class> 
+			 	 <class name="com.MITDPS.ResellerPortal.testcases.Registrant_Name_Change">
+			 	 <methods>
+		     		<include name="createTestDataForRegistrantChange"/>  
+		     		<include name="verifyDomainRegistrantNameChange"/>  
+		     	</methods>
+			 	 </class> -->
+			 <class name="com.MITDPS.ResellerPortal.testcases.AutomaticCancellation">
+			  	<methods>
+			     	<include name="verifyDomainManagerProductCancellation"/>
+			     	<include name="verifyEmailHostingProductCancellation"/>  
+			     	<include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/>
+			     	<include name="verifyNonSolutionAndComponentProductCancellation"/>
+			     	<include name="verifySolutionAndComponentProductCancellation"/>
+		     	</methods>
+			  </class>
+			  
+			  <!-- MITDPS Customer portal  -->	
+			  <class name="com.MITDPS.CustomerPortal.testcases.CreditCard_Operations">
+			  <methods>
+		     		 
+		     		<include name="testAddNewCreditCardInSMUI"/>
+		     		<include name="verifyUpdateSubscriptionInSMUI"/>
+		     		<include name="testMakeCreditCardDefaultInSMUI"/>
+		     		<include name="testRechargePrepaidUsingExistingCardInSMUI"/>
+		     		<include name="testRechargePrepaidUsingNewCardInSMUI"/>
+		     		<include name="testDeleteCreditCardInSMUI"/>
+		     	</methods>
+			  </class>
+		    
+		</classes>
+	</test>  
+	
+</suite> 

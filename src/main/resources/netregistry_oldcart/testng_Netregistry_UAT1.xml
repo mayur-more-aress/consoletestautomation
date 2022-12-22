@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Netregistry Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	value="uat1"/>		
+	<!-- <listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners> -->
+    
+    <test name="Netregistry Test Cases" >
+		<classes>
+		<!-- Netregistry Customer portal -->	
+		<!--	<class name="com.NRG.CustomerPortal.testcases.RenewDomain">
+		     </class>  -->
+	<!--	 <class name="com.NRG.CustomerPortal.testcases.CreditCard_Operations"></class>-->
+		     
+		     
+		      <!--   <class name="com.NRG.CustomerPortal.testcases.RegistrantNameChange">
+		       <methods>                    
+             <include name="verifyDomainRegistration"/>  
+           <include name="verifyRegistrantNameChangeWithExistingCard"/>
+             <include name="verifyRegistrantNameChangeWithNewCard"/>
+                </methods>
+		       </class>-->
+		     
+		     <!-- Netregistry old shopping cart -->	 
+		<!--    <class name="com.NRG.OldShoppingCart.testcases.DomainAndProduct_Order">
+		      <methods>                   
+             <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/>
+                </methods>
+		     </class>-->
+	   <!--  <class name="com.NRG.OldShoppingCart.testcases.Domain_Registration"></class>
+	   <class name="com.NRG.OldShoppingCart.testcases.DomainAndProduct_Order"></class>
+	       	  <class name="com.NRG.OldShoppingCart.testcases.Domain_Transfer"></class>
+	       	 <class name="com.NRG.OldShoppingCart.testcases.ProductRenewal"></class>
+	       	 <class name="com.NRG.OldShoppingCart.testcases.SSL_Product"></class>  -->
+	       	 
+	       	 <!--    <class name="com.paymentgateway.uat.netregistry.testcases.NRGCustomerPortalJourneyTest">
+		      <methods>                   
+             <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal"/>
+                </methods>
+		     </class>-->
+		     
+		     <class name="com.NRG.CustomerPortal.testcases.CreditCard_Operations">
+		       <methods>                    
+             <include name="testLoginAsClient"/>  
+            </methods>
+		       </class>
+		</classes>
+	</test> 
+</suite> 

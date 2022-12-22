@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test name="Reseller Api UAT1 Test Cases">
+	
+	 <classes>	
+		  <class name="com.MITDPS.resellerapi.testcases.ResellerApiPortalTest">
+		     <methods>
+		    <include name="verifyDomainRegistration"/>
+		     <include name="verifyDomainRenewal"/>
+		   <!--   <include name="verifyCreateNameServer"/>
+		    <include name="verifyDomainTransferNonAu"/>-->
+		    <include name="verifyDomainLockandUnlock"/>
+		    <include name="verifyWhoisDomain"/>     
+		     </methods>
+		     </class>
+		</classes>
+	</test>  
+</suite> 
+
+
+

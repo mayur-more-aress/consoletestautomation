@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+	
+	 <class name="com.salesdb.testcases.ProductProvisiningTest"> 
+             <methods> 
+            <include name="verify_Domain_and_RapidSSLOrder_InSalesDB"/>
+            <include name="verify_Domain_and_DIFM_Order_InSalesDB"/>  
+             <include name="verify_Domain_and_HostingService_Order_InSalesDB"/> 
+            </methods>
+             </class>
+   <class name="com.NRG.OldShoppingCart.testcases.DomainAndProduct_Order"> 
+        <methods> 
+           <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/> 
+            <include name="verifyDomainRegistrationAndEmailProductForExistingBTCustomerUsingExistingCard"/>
+            <include name="verifyDomainRegistrationAndHostingServiceForExistingCustomerUsingPrepaidCredit"/>  
+            <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingExistingCard"/> 
+            </methods>
+	     </class>  
+	      <class name="com.NRG.OldShoppingCart.testcases.SSL_Product"></class>
+	     
+              <class name="com.NRG.NewShoppingCart.testcases.TestDomainRegistrationAndEmailServiceOrder"></class>
+              <class name="com.NRG.NewShoppingCart.testcases.TestDomainRegistrationWithDomainPrivacy"></class>
+              <class name="com.NRG.NewShoppingCart.testcases.TestDomainregistrationWithHostingAndExtraService"></class>
+         <!--  <class name="com.NRG.NewShoppingCart.testcases.ProductProvisioning"></class> -->
+              <class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingExistingCard"></class>
+              <class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingNewCard"></class>
+	         <class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingPrepaid"></class>
+	         <class name="com.NRG.NewShoppingCart.testcases.TestNewCustomerScenarioUsingNewCard"></class>
+	         
+	          <class name="com.MIT.OldShoppingCart.testcases.SSL_Product"></class>
+	          
+	      <class name="com.MIT.OldShoppingCart.testcases.DomainAndProduct_Order"> 
+             <methods> 
+            <include name="verifyDomainRegistrationAndEmailProductForExistingBTCustomerUsingExistingCard"/>
+            <include name="verifyDomainRegistrationAndHostingServiceForExistingCustomerUsingPrepaidCredit"/>  
+            <include name="verifyDomainRegistrationAndDomainManagerAddOnForExistingCustomerUsingExistingCard"/> 
+            <include name="verifyMultiDomainRegistrationAndWebHostingProduct"/> 
+            </methods>
+	     </class>
+	
+             <!--<class name="com.MITDPS.ResellerPortal.testcases.DomainAnd_ProductOrder"> 
+             <methods> 
+            <include name="verifyDomainAndWebHostingProductRegistration"/>
+            <include name="verifyPurchaseOffice365Product"/>  
+            <include name="verifyDomainAndDomainManagerProductRegistrationInResellerPortal"/>
+            </methods>
+	     </class>-->
+		</classes>
+	</test>  
+</suite> 
+

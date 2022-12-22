@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+	<class name="com.NRG.OldShoppingCart.testcases.Domain_Registration">
+ 			 <methods>
+	               <include name="verifyDomainRegistrationForExistingCustomerWithNewCard"/>
+	                <include name="verifyDomainRegistrationForExistingCustomerUsingPrepaidCredit"/> 
+	                <include name="verifyMultipleDomainRegistrationForExistingCustomerUsingExistingCard"/>   
+	                  <include name="verifyDomainRegistrationForNewCustomerWithNewCard"/>   
+	               <!--    <include name="verifyDomainBackorderRegistrationForExistingCustomerUsingExistingCard"/>  -->                    
+	             </methods>
+	            </class>
+	
+      <class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingExistingCard"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingNewCard"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestExistingCustomerScenarioUsingPrepaid"></class>
+ 			<class name="com.NRG.NewShoppingCart.testcases.TestNewCustomerScenarioUsingNewCard"></class>
+ 			
+ 			  <class name="com.NRG.NewShoppingCart.testcases.CheckDomainAvailability"></class>
+	             <class name="com.salesdb.testcases.NRGSalesDBDomainRegistration">
+ 			 <methods>
+	                <include name="verify_ComAuDomain_Order_InSalesDB"/>               
+	             </methods>
+	            </class> 
+	            
+	         <class name="com.MITDPS.ResellerPortal.testcases.Register_Domain"></class>
+	         
+	    <class name="com.MIT.OldShoppingCart.testcases.CheckDomainAvailability"></class>
+	          
+	           <class name="com.MIT.OldShoppingCart.testcases.Domain_Registration">
+ 			 <methods> 
+	               <include name="verifyMultipleDomainRegistrationForExistingCustomerUsingExistingCard"/>
+	                <include name="verifyDomainRegistrationForExistingCustomerUsingPrepaidCredit"/>   
+	                 <include name="verifyDomainRegistrationForExistingCustomerWithNewCard"/> 
+	                  <include name="verifyDomainRegistrationForNewCustomerWithNewCard"/>
+	               <!--   <include name="verifyDomainBackorderRegistrationForExistingCustomerUsingExistingCard"/>  -->                      
+	             </methods>
+	            </class>
+		</classes>
+	</test>  
+</suite> 
+

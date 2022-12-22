@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Regression Test Automation - PROD Test Suite">
+	<parameter name="environment" value="prod" />
+	<parameter name="pretest" value="enabled" />
+
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+
+	<test name="Regression Test Cases">
+		<classes>
+			<class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
+				<methods>
+					<include name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" />
+					<include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" />
+				</methods>
+			</class>
+			<class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
+				<methods>
+					<include name="verify_NetDomain_and_DomainManager_InSalesDB" />
+					<include name="verify_ComAuDomain_Order_InSalesDB" />
+					<!--   <include name="verify_ComDomain_and_Office365_Order_InSalesDB"/> -->
+					<include name="verify_NzDomain_Order_InSalesDB" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

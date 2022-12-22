@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+
+  <class name="com.NRG.CustomerPortal.testcases.RegistrantNameChange"> 
+        <methods> 
+            <include name="verifyRegistrantNameChangeWithExistingCard"/>
+            <include name="verifyRegistrantNameChangewithNewCard"/>  
+            <include name="verifyCompleteAuChangeOwnership"/> 
+            </methods>
+	     </class>
+	            
+	     <class name="com.MIT.CustomerPortal.testcases.RegistrantNameChange"> 
+           <methods>  
+            <include name="verifyRegistrantNameChangeWithExistingCard"/>
+            <include name="verifyRegistrantNameChangeWithNewCard"/>  
+            <include name="verifyCompleteAuChangeOwnership"/>              
+	        </methods>
+	      </class> 
+	      
+	       <class name="com.MITDPS.ResellerPortal.testcases.Registrant_Name_Change"> 
+            <methods>  
+               <include name="createTestDataForRegistrantChange"/>   
+               <include name="verifyDomainRegistrantNameChange"/>          
+	        </methods>
+	      </class> 
+	      
+	 <class name="com.MITDPS.resellerapi.testcases.ResellerApiPortalTest"> 
+            <methods>  
+               <include name="verifyRegistrantNameChange"/>         
+	        </methods>
+	      </class>
+		</classes>
+	</test>  
+</suite> 
+

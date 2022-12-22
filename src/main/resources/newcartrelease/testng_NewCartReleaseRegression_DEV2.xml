@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="New Cart Release Regression Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	  value="dev2" />
+	<!-- 	Iteration value (minimum = 1, maximum = any) -->
+	<parameter name="iteration"       value="1" />
+	
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+    
+    <test name="New Cart Release Regression Test Cases" >
+		<classes>
+		
+			<!-- Netregistry Virtualization				 -->
+<!-- 			<class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard"> 
+	        </class>
+	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard"> 
+	        </class> -->
+	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard"> 
+	        </class>
+ 
+		</classes>
+	</test>  
+	
+</suite> 

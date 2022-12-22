@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Check Domain Availability Test Suite" thread-count="1"
+	parallel="tests" preserve-order="true">
+
+	<parameter name="environment" value="uat1" />
+	
+	<listeners> <listener class-name="com.reports.extentreportslistener.ExtentReportListener" 
+		/> </listeners>
+
+	<test name="Check Domain Availability Test Cases">
+		<classes>
+		<!--		<class name="com.citc.testcases.stage.TPPOldShoppingCart_CheckDomainAvailability">
+				<methods>
+					<include name="verifyDomainNameIsAvailableForRegistration" />
+					<include name="verifyDomainNameIsNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
+				</methods>
+			</class>-->
+		<!--	 <class name="com.citc.testcases.stage.MITOldShoppingCart_CheckDomainAvailability"> 
+		        <methods>
+	            	<include name="verifyDomainNameIsAvailableForRegistration" />  
+	             	<include name="verifyDomainNameIsNotAvailableForRegistration" /> 
+	             	<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />               
+             	</methods>
+			</class> -->
+			<class name="com.newcartregression.testcases.CheckDomainAvailability">
+	         <methods>
+               <include name="verifyDomainNameIsAvailableForRegistration" />        
+              <include name="verifyDomainNameIsNotAvailableForRegistration" />                    
+             </methods> 
+	        </class> 
+		</classes>
+	</test>
+</suite>

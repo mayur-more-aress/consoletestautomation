@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+        <class name="com.MIT.CustomerPortal.testcases.CreditCard_Operations">
+	       <methods>   
+              <include name="testAddNewCreditCardInSMUI"/>  
+                 <include name="testModifyExistingCreditCardInSMUI"/> 
+                <include name="testMakeCreditCardDefaultInSMUI"/> 
+                <include name="testDeleteCreditCardInSMUI"/>
+                <include name="testRechargePrepaidUsingNewCardInSMUI"/>  
+                <include name="testRechargePrepaidUsingExistingCardInSMUI"/> 
+                <include name="verifyUpdateSubscriptionInSMUI"/> 
+                <include name="testLoginToCustomerPortal"/> 
+                <include name="testLoginAsClient"/>
+                <include name="testLoginAsClientdomainLevel"/>
+                 <include name=" testLoginToStore"/>
+                
+               
+             </methods> 
+        </class> 
+         <class name="com.MIT.CustomerPortal.testcases.RenewDomain">
+	     </class> 
+	       <class name="com.MIT.CustomerPortal.testcases.RegistrantNameChange">
+	       <methods>   
+             <include name="verifyRegistrantNameChangeWithExistingCard"/>  
+              <include name="verifyRegistrantNameChangeWithNewCard"/>  
+             </methods> 
+        </class>
+         <class name="com.MIT.CustomerPortal.testcases.AutomaticCancellation">
+	       <methods>   
+          <include name="verifyNonSolutionProductAndComponentProductCancellation"/>
+          <include name="verifyDomainPrivacyProductCancellation"/>
+           <include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/>
+          <include name="verifyWebHostingProductCancellation"/>
+            <include name="verifDomainManagerProductCancellation"/>
+            <include name="verifyEmailHostingProductCancellation"/>
+            
+             </methods> 
+        </class>
+		</classes>
+	</test>  
+</suite> 
+

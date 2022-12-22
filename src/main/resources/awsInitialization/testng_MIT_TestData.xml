@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression citc Test Suite">
+	<parameter name="environment"  value="citc"/>
+	<parameter name="virtualization"  value="MelbourneIT"/>
+	<parameter name="numberofdomains"  value="3"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test name="Console Release Regression CITC Test Cases">
+		<classes> 
+		 <class	name="com.awstestdataInitialization.testcases.ShoppingCart_MIT">
+				<methods>
+					<include name="verifyMultipleDomainRegistrationForExistingCustomerUsingExistingCard" />
+					<include name="generateARenewalWorkflowForDomainsFromConsoleAdmin" />
+				</methods>
+			</class> 
+		</classes>
+	</test>  
+</suite> 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Console Release Regression UAT1 Test Suite">
+	<parameter name="environment"  value="uat1"/>
+	<parameter name="obsidian"     value="disabled"/>
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	<test name="Console Release Regression UAT1 Test Cases">
+	<classes>
+	
+          
+          <class name="com.NRG.CustomerPortal.testcases.CreditCard_Operations">
+	       <methods>  
+              <include name="testAddNewCreditCardInSMUI"/>  
+               <include name="testModifyExistingCreditCardInSMUI"/> 
+                <include name="testMakeCreditCarddefaultInSMUI"/>  
+                <include name="testDeleteCreditCardInSMUI"/>
+                <include name="testRechargePrepaidUsingNewCardInSMUI"/>  
+                <include name="testRechargePrepaidUsingExistingCardInSMUI"/> 
+                <include name="verifyUpdateSubscriptionInSMUI"/> 
+                <include name="testLoginToCustomerPortal"/> 
+                <include name="testLoginAsClient"/>
+                <include name="testLoginAsClientDomainLevel"/>
+                  <include name=" testLoginToStore"/>
+             </methods> 
+        </class> 
+        
+         <class name="com.NRG.CustomerPortal.testcases.RenewDomain"> 
+          </class> 
+        
+	   <class name="com.NRG.CustomerPortal.testcases.AutomaticCancellation"> 
+          <methods>   
+                <include name="verifyWebHostingProductCancellation"/>
+                 <include name="verifyEmailHostingProductCancellation"/> 
+                 <include name="verifyDomainManagerProductCancellation"/>
+                  <include name="verifyDomainManagerAndDomainPrivacyProductCancellation"/>
+                  <include name="verifyDomainPrivacyProductCancellation"/>
+                 <include name="verifyNonSolutionProductAndComponentProductCancellation"/> 
+                 <!--   <include name="verifySolutionProductAndComponentProductCancellation"/>   
+              <include name="verifyDomainBackorderProductCancellation"/>-->    
+             </methods> 
+          </class>  
+          <class name="com.NRG.CustomerPortal.testcases.RegistrantNameChange"> 
+          <methods>   
+                <include name="verifyRegistrantNameChangeWithExistingCard"/>
+                 <include name="verifyRegistrantNameChangeWithNewCard"/> 
+                   <include name="verifyRegistrantNameChangewithPrepaidCredit"/> 
+             </methods> 
+          </class> 
+		</classes>
+	</test>  
+</suite> 
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AWS Test data initialization" thread-count="1"
+	parallel="tests" preserve-order="true">
+
+	<parameter name="environment" value="aws" />
+	<parameter name="noOfAccounts" value="1" />
+
+	 <listeners> 
+	 	<listener class-name="com.reports.extentreportslistener.ExtentReportListener" /> 
+	 </listeners> 
+
+	<test name="RRP-Proxy Regression Test Cases">
+		<classes>
+		 <class	name="com.awstestdataInitialization.testcases.CreateNewGreenCodeSalesDB">
+				<methods>
+					<include name="createNewDPSResellerGreencodeInSalesDB" />
+				</methods>
+			</class> 
+		</classes>
+	</test>
+</suite>
