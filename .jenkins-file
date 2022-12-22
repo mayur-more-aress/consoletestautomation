@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Regression') {
             steps {
-                bat '${params.regression}'
+                bat "'${params.regression}'"
             }
         }
     }
